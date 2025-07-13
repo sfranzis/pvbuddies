@@ -5,7 +5,6 @@ import locale
 import calendar
 import pytz
 
-import constants
 import post_bsky
 import post_mastodon
 import sendmail

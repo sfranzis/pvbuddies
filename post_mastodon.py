@@ -17,4 +17,3 @@ def post_to_mastodon(message):
         print("✅ Post erfolgreich gesendet!")
     except Exception as e:
         print(f"❌ Fehler beim Posten: {e}")
-
