@@ -1,0 +1,4 @@
+atproto==0.0.59
+influxdb-client==1.48.0
+Mastodon.py==2.0.1
+pytz==2025.1
