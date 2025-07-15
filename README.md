@@ -53,6 +53,11 @@ from(bucket: "homeassistant")
 
 1. **Datenquelle**: `from(bucket: "homeassistant")` - Lädt Daten aus dem Home Assistant InfluxDB-Bucket
 2. **Zeitbereich**: `range(start: -50d, stop: -1m)` - 50 Tage Vergangenheit bis 1 Minute vor jetzt
+   *Warum 50 Tage?* Obwohl nur monatliche Daten benötigt werden, sind 50 Tage erforderlich, da:
+   - Die monatliche Aggregation (`aggregateWindow`) mindestens 2 Datenpunkte für die nachfolgende `difference()` Operation benötigt
+   - Je nach Zeitpunkt der Ausführung (z.B. am Monatsanfang) können Daten aus dem Vormonat fehlen
+   - 50 Tage stellen sicher, dass immer genügend historische Daten für eine zuverlässige Differenzberechnung vorhanden sind
+   - Dies ist ein Sicherheitspuffer für unregelmäßige Datenerfassung (wie bei einer Wallbox) oder Systemausfälle
 3. **Grundfilter**: Nur kWh-Messungen mit positiven Werten
 4. **Sensor-Auswahl**: Spezifische Entity-IDs für:
    - **SMA Wechselrichter** (SN: 3006924963): Ertrag, Einspeisung, Netzbezug
