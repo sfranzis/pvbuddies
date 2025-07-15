@@ -65,7 +65,7 @@ from(bucket: "homeassistant")
    - **Batteriesystem** (SN: 1901018498): Ladung und Entladung
    - **E-Auto**: Ladeenergie (über evcc)
 5. **Monatliche Aggregation**: `aggregateWindow()` mit letztem Wert des Monats
-6. **Differenzberechnung**: `difference()` wandelt kumulative Zählerstände in monatliche Werte um
+6. **Differenzberechnung**: `difference()` berechnet die Differenz aus den kumulierten Zählerständen und liefert so die Werte für den jeweiligen Monat.
 7. **Datenstrukturierung**: `pivot()` transformiert die Daten in tabellarische Form
 8. **Umbenennung**: Deutsche Spaltennamen für bessere Lesbarkeit
 
