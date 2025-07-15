@@ -90,7 +90,6 @@ Aus den Rohdaten werden folgende Werte berechnet:
 ## Hinweise
 
 - Dieses Programm ist speziell auf ein Setup mit Home Assistant und InfluxDB 2 ausgelegt und auf meine persönliche Umgebung optimiert. Es erwartet bestimmte Entity-Namen und Datenstrukturen. Kommen andere Komponenten zur Datensammlung und Speicherung zum Einsatz, muss das Programm darauf angepasst werden. Dies erfordert Know-How über die entsprechenden Systeme und Datenstrukturen.
-- Anpassungen für andere Setups sind möglich, aber mit Eigeninitiative und Know-How verbunden.
 - Für InfluxDB-User mit Home Assistant ist ein guter Startpunkt in der InfluxDB UI, eine Query über die Dimension `filter(fn: (r) => r._measurement == "kWh" and r._value > 0)` zu starten.
 - Die Entity-IDs müssen entsprechend der eigenen Home Assistant Konfiguration angepasst werden.
 - Die installierte PV-Leistung (14,53 kWp) muss für die Effizienzberechnung angepasst werden.
