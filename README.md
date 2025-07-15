@@ -16,7 +16,7 @@ Dieses Projekt dient der monatlichen Auswertung und automatisierten Berichtersta
 
 ## Flux Query Erklärung
 
-Das Herzstück der Datenverarbeitung ist eine komplexe InfluxDB Flux Query, die monatliche Energiedaten aus Home Assistant abruft und verarbeitet:
+Kern der Datenverarbeitung ist eine komplexe InfluxDB Flux Query, die monatliche Energiedaten aus Home Assistant abruft und aggregiert:
 
 ### Query-Aufbau
 
